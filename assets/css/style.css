@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    user-select: none;
+}
+
+body {
+
+}
+
+.background_primary {
+    width: 100%;
+    height: 100vh;
+    background: url(../../img/background/bg1.jpg);
+    filter: brightness(20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container_primary {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.navbar {
+    width: 100%;
+    height: 10%;
+    padding: 4vh 0vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 23;
+}
+
+.navbar img {
+    width: auto;
+}
+
+.nav_list {
+    width: 70%;
+}
+
+.nav_list .active_link {
+    color: white;
+}
+
+.nav_list ,.nav_list a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: darkgoldenrod;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.nav_list li:nth-child(4) img{
+    width: auto;
+    height: 15vh;
+    overflow: hidden;
+}
+
+.peaky_logo_right {
+    position: absolute;
+    right: 40vh;
+    transform: scale(1.8);
+    top: 40vh;
+    animation: peaky_logo_right 2s linear 0.5s 1 normal forwards;
+}
+
+
+@keyframes peaky_logo_right {
+    from {
+        right: 40vh;
+        transform: scale(1.8);
+    }
+    to {
+        right: 0;
+        transform: scale(1.3);
+    }
+}
+
+.perso {
+    position: absolute;
+    display: flex;
+    width: 80%;
+}
+
+.perso1 {
+    z-index: 20;
+    margin-left: 30%;
+}
+
+
+.perso2 {
+    transform: scale(0.1);
+    animation: perso_out_left 2s linear 0.5s 1 normal forwards;
+    position: absolute;
+    margin-left: 30%;
+
+}
+
+.perso3 {
+    transform: scale(0.1);
+    animation: perso_out_right 2s linear 0.5s 1 normal forwards;
+    position: absolute;
+    margin-left: 30%;
+}
+
+@keyframes perso_out_right {
+    from {
+        transform: scale(0.5);
+        margin-left: 30%;
+    }
+    to {
+        transform: scale(0.8);
+        margin-left: 45%;
+    }
+}
+
+
+@keyframes perso_out_left {
+    from {
+        transform: scale(0.5);
+        margin-left: 30%;
+    }
+    to {
+        transform: scale(0.8);
+        margin-left: 10%;
+    }
+}
+
+
+.smoke {
+    position: absolute;
+    z-index: 22;
+    display: flex;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+
+.smoke1{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    opacity: 0.4;
+    animation: bounce2 120s linear 0.5s infinite;
+}
+
+.smoke2{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.4;
+    position: absolute;
+    animation: bounce1 120s linear 0.5s infinite;
+}
+
+.smoke3{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-right: -50vh;
+    opacity: 0.4;
+    right: 0;
+    position: absolute;
+    animation: bounce 120s linear 0.5s infinite;
+}
+
+
+@keyframes bounce1 {
+    0%   { margin-left: -20vh ;}
+    50%  { margin-left: 60vh ;}
+    100% { margin-left: -20vh ;}
+}
+
+@keyframes bounce2 {
+    0%   { margin-left: -5vh ;}
+    50%  { margin-left: 40vh ;}
+    100% { margin-left: -5vh ;}
+}
+
+
+@keyframes bounce {
+    0%   { margin-right: -40vh ;}
+    50%  { margin-right: 20vh ;}
+    100% { margin-right: -40vh ;}
+}
+
+.smoke2 img{
+    width: 100%;
+}
+
+.smoke3 img{
+    width: 100%;
+    
+}
+
+.animSmoke {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../img/DuXi.gif);
+    z-index: 30;
+    display: none;
+    animation: appear 2s linear 0.5s infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes appear {
+    0% {opacity: 0.0;}
+    50% {opacity: 1;}
+    100% {opacity: 0.0;}
+}
+
+.personage_container{
+    display: none;
+}
+
+
+
+
+
+
+.parent_cadre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    padding: 5vh 0vh 0vh 0vh;
+}
+
+
+.cadre {
+    position: absolute;
+    width: 50%;
+    height: 75%;
+    background: url(../../img/cadre.png);
+    background-size:contain;
+    background-position: center;
+    background-repeat:no-repeat;
+
+}
+
+/* .cadre img {
+    width: 60%;
+} */
+
+.pic_cadre {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    background: url(../../img/finn.jpg);
+    background-position: center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+/* .pic_cadre img {
+    width: 40%;
+
+} */
+
+.barillet {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    right: 30%;
+    transform: rotate(33deg);
+    background: url(../../img/barillet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
